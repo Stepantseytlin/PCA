@@ -68,10 +68,12 @@ if __name__ == "__main__":
     print(classes.classes)
     pca = classes.train_PCA()
     fig = plt.figure()
-    ax = fig.add_subplot()
+    ax = fig.add_subplot(2,1,1)
     projected = classes.data.dot(pca.components_.T)
     colors = []
     for i in range(len(classes.classes)):colors.append([i for _ in range(sample)]) 
     print(colors)
     ax.scatter(projected[:,0],projected[:,1],c= colors)
+    ax = fig.add_subplot(2,1,2)
+    ax.scatter(range(3),pca.singular_values_)
     plt.show()
