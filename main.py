@@ -61,13 +61,7 @@ class set_loader:
         
 
 if __name__ == "__main__":
-    # collection = get_image_collection("D:/Steven/EmperorEngeneerUniversity/cath/trg_dataset/Audi")
-    # fig = plt.figure()
-
-    # ax = fig.add_subplot()
-    # print(collection.shape)
-    # plt.imshow(collection[0].reshape(680,1358))
-    # plt.show()
+    
     sample = 17
     classes = set_loader()
     classes.load("D:/Steven/EmperorEngeneerUniversity/cath/trg_dataset",sample)
